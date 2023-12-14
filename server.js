@@ -24,6 +24,10 @@ app.use(
   })
 );
 
+app.get("/test", (req, res) => {
+  res.send("Hello World");
+});
+
 // Make request using body x-www
 app.use("/api/users", require("./routes/authRoute"));
 app.use("/api/meetings", require("./routes/meetingRoute"));
